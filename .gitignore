@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 *.class
 
@@ -9,3 +10,16 @@ target/
 *.iml
 
 .envinstall_member3_phase*.sh
+=======
+target/
+*.class
+
+.DS_Store
+
+.vscode/
+
+.idea/
+*.iml
+
+.envinstall_member3_phase*.sh
+>>>>>>> origin/main
