@@ -12,7 +12,8 @@ import java.awt.event.KeyEvent;
 
 /**
  * Authentication dialog for ECOfleet.
- * Safe credential handling, clear error messages, and one-click demo role logins.
+ * Safe credential handling, clear error messages, and one-click demo role
+ * logins.
  */
 public final class LoginDialog extends JDialog {
 
@@ -65,31 +66,39 @@ public final class LoginDialog extends JDialog {
         gbc.insets = new Insets(6, 6, 6, 6);
 
         // Username
-        gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0.3;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 0.3;
         JLabel userLabel = new JLabel("Username:");
         userLabel.setFont(UITheme.FONT_BODY_BOLD);
         userLabel.setForeground(UITheme.TEXT_MAIN);
         formCard.add(userLabel, gbc);
 
-        gbc.gridx = 1; gbc.weightx = 0.7;
+        gbc.gridx = 1;
+        gbc.weightx = 0.7;
         usernameField = new JTextField(16);
         usernameField.setFont(UITheme.FONT_BODY);
         formCard.add(usernameField, gbc);
 
         // Password
-        gbc.gridx = 0; gbc.gridy = 1; gbc.weightx = 0.3;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 0.3;
         JLabel passLabel = new JLabel("Password:");
         passLabel.setFont(UITheme.FONT_BODY_BOLD);
         passLabel.setForeground(UITheme.TEXT_MAIN);
         formCard.add(passLabel, gbc);
 
-        gbc.gridx = 1; gbc.weightx = 0.7;
+        gbc.gridx = 1;
+        gbc.weightx = 0.7;
         passwordField = new JPasswordField(16);
         passwordField.setFont(UITheme.FONT_BODY);
         formCard.add(passwordField, gbc);
 
         // Error message label
-        gbc.gridx = 0; gbc.gridy = 2; gbc.gridwidth = 2;
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
         errorLabel = new JLabel(" ");
         errorLabel.setFont(UITheme.FONT_SMALL);
         errorLabel.setForeground(UITheme.STATUS_DANGER_FG);
@@ -127,7 +136,7 @@ public final class LoginDialog extends JDialog {
         demoButtons.add(createDemoButton("Admin", "admin", "Password@123"));
         demoButtons.add(createDemoButton("Operator", "operator1", "Password@123"));
         demoButtons.add(createDemoButton("Driver", "driver1", "Password@123"));
-        demoButtons.add(createDemoButton("Hospital", "gen_hospital", "Password@123"));
+        demoButtons.add(createDemoButton("User", "society_gen", "Password@123"));
 
         demoPanel.add(demoButtons);
 
@@ -160,8 +169,7 @@ public final class LoginDialog extends JDialog {
         btn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         btn.setBorder(new CompoundBorder(
                 new LineBorder(UITheme.BORDER_COLOR, 1, true),
-                new EmptyBorder(3, 8, 3, 8)
-        ));
+                new EmptyBorder(3, 8, 3, 8)));
         btn.addActionListener(e -> {
             usernameField.setText(user);
             passwordField.setText(pass);
